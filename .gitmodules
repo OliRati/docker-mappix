@@ -1,0 +1,3 @@
+[submodule "mappix"]
+	path = mappix
+	url = https://github.com/projet-conciergerie/mappix.git
