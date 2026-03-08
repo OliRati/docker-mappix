@@ -42,12 +42,6 @@ Enter inside the php container
 docker-compose exec php bash
 ```
 
-Update composer modules with command
-
-```bash
-composer update
-```
-
 And Initialize the Mappix database ( if not already done )
 
 ```bash

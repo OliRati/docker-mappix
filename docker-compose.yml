@@ -28,6 +28,7 @@ services:
       - ./mappix:/var/www
       - ./cert:/var/www/cert
       - ./.env.local:/var/www/.env.local
+    command: sh -c "composer update && php-fpm -F"
     depends_on:
       certgen:
         condition: service_completed_successfully
