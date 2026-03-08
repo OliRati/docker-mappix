@@ -38,21 +38,23 @@ docker compose down
 
 Enter inside the php container
 
-'''bash
+```bash
 docker-compose exec php bash
 ```
 
 Update composer modules with command
 
-```
+```bash
 composer update
 ```
 
 And Initialize the Mappix database ( if not already done )
 
-```
-# Update access permission for public ( needed to save Overpass cache )
-chmod -R 777 public/
+```bash
+# Create dir public/data with the right permissions
+# ( needed to save Overpass cache from php container )
+mkdir public/data
+chmod 777 public/data
 #
 # Create the databases
 php bin/console doctrine:database:create
@@ -67,19 +69,19 @@ exit
 
 Start stack:
 
-```
+```bash
 docker compose up -d --build
 ```
 
 Enter PHP container:
 
-```
+```bash
 docker compose exec php bash
 ```
 
 Run migrations:
 
-```
+```bash
 php bin/console doctrine:migrations:migrate
 ```
 
@@ -169,12 +171,15 @@ perfect for GPS / camera / WebRTC testing.
 
 ## Prepare Docker Symfony developper stack
 
-Setup the stack
+Setup the Docker stack with
 ```bash
 docker-compose build --no-cache
 ```
 
+```bash
 docker-compose up
+```
 
+```bash
 docker-compose down
-
+```
