@@ -20,7 +20,7 @@ git submodule update --init --recursive
 Build and run the Docker stack
 
 ```bash
-docker compose up -build
+docker compose up --build
 ```
 
 Later run it with 
