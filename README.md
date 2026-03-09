@@ -120,6 +120,14 @@ Used for Vite developpement with https enabled
 
 ## Access services
 
+### Nginx HTTP
+
+This is used for easy connection with a redirect to https Symfony server
+
+```
+http://localhost:8080
+```
+
 ### Symfony HTTPS:
 
 ```
